@@ -1,0 +1,78 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 20px; }
+
+body, html {
+  width: 100%;
+  height: 100%; }
+
+#map {
+  display: inline-block;
+  width: 67%;
+  height: 100%; }
+
+.section-right {
+  margin-top: 30px;
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 30%;
+  vertical-align: top; }
+
+.statistics {
+  border: black solid 1px;
+  padding: 20px 0; }
+  .statistics__title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; }
+  .statistics__content {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around; }
+  .statistics__name li, .statistics__value li {
+    list-style: none; }
+    .statistics__name li:not(:last-child), .statistics__value li:not(:last-child) {
+      margin-bottom: 10px; }
+
+.button__reset {
+  margin-top: 30px;
+  padding: 10px 0; }
+  .button__reset:hover {
+    cursor: pointer; }
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  /* фоновый цвет */
+  background: #e0e0e0;
+  z-index: 1001; }
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear; }
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg); } }
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0; }
+
+.loaded .preloader {
+  display: none; }
+
+/*# sourceMappingURL=style.css.map */
